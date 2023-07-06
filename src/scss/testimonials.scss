@@ -1,0 +1,106 @@
+.testimonials {
+    background-image: url("../img/testmonials-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 108px;
+    padding-bottom: 25.5px;
+    text-align: center;
+    min-width: 343px;
+    height: 100%;
+    @include tablet {
+      padding-top: 86px;
+    }
+    @include mobile {
+      padding-top: 57px;
+    }
+  }
+
+.testimonials__title {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1;
+  color: $general-text-color;
+    @include tablet {
+      font-size: 42px;
+      line-height: 1;
+    }
+    @include mobile {
+      font-size: 36px;
+      line-height: 1.33;
+    }
+}
+
+.testimonials__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  align-items: center;
+  justify-items: center;
+  column-gap: 50px;
+  row-gap: 111px;
+  margin-top: 75px;
+  margin-bottom: 118.5px;
+  @include tablet {
+    row-gap: 56px;
+    grid-template-columns: repeat(2, minmax(auto, 1fr));
+  }
+  @include mobile {
+    row-gap: 45px;
+    grid-template-columns: repeat(1, minmax(auto, 1fr));
+  }
+}
+
+.testimonials__item-img {
+  &--smashing {
+    margin-bottom: 33px;
+  }
+  &--codrops {
+    margin-bottom: 29px;
+  }
+  &--w {
+    margin-bottom: 22px;
+  }
+  &--pixel {
+    margin-bottom: 33px;
+  }
+  &--creative {
+    margin-bottom: 28px;
+  }
+  &--tnw {
+    margin-bottom: 30px;
+  }
+}
+
+
+.testimonials__item-text {
+  color: $general-text-color;
+  font-family: $additional-font-family;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.testimonials__text {
+  color: #a291a5;
+  font-family: $additional-font-family;
+  font-size: 14px;
+  line-height: 21px;
+  max-width: 887px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    right: 0px;
+    bottom: -18.5px;
+    margin: 0 auto;
+    height: 2px;
+    width: 88%;
+    background-color: #645766;
+  }
+}

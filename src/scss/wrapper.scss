@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+a, li {
+    text-decoration: none;
+}
+
+body{
+  font-family: $main-font-family;
+}
+
+
+.wrapper{
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.sect-0{
+    background-color: #635C73;
+    height: 240px;
+    width: 100%;
+}

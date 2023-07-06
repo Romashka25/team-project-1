@@ -1,559 +1,352 @@
-@import "./reset.scss";
-@import "../font/";
-$maxWidth:1200px;
-
-.rev-editor {
-  text-align: center;
-  
-  &__title {
-    margin-bottom: 23px;
-    @extend %fontFamilyMontserrat;
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #635c73;
-    line-height: 1.5;
-    font-weight: bold;
-  }
-
-  &__caption {
-    @extend %fontFamilyLato;
-    padding: 0 15px;
-    text-align: center;
-    font-size: 14px;
-    color: #323232;
-  }
-
-  &__actions {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 34px 0 68px;
-  }
-
-  &__actions-item {
-    display: inline-block;
-    margin: 0 5px 20px;
-    border: 1px solid rgba(27, 31, 35, .2);
-    border-radius: 3px;
-    @extend %fontFamilyLato;
-    font-weight: 700;
-    font-size: 14px;
-    color: #24292e;
-    user-select: none;
-  }
-
-  &__actions-btn {
-    display: inline-block;
-    padding: 3px 10px;
-    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-    border-right: 1px solid rgba(27, 31, 35, .2);
-    cursor: pointer;
-  }
-
-  &__actions-item:nth-child(1) &__actions-btn:after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border: 4px solid transparent;
-    border-top-color: currentcolor;
-    vertical-align: -2px;
-  }
-
-  &__actions-btn:hover {
-    box-shadow: inset 0 25px 0 0 rgba(0, 0, 0, .03);
-  }
-
-  &__actions-btn:active {
-    box-shadow: inset 0 25px 0 0 rgba(0, 0, 0, .03),
-    inset 0 1px 5px 0 rgba(0, 0, 0, 0.4);
-  }
-
-  &__icon {
-    vertical-align: -3px;
-  }
-
-  &__action-count {
-    margin: 0 5px;
-  }
-}
-
-.you-get {
-  padding: 34px 25px 0;
-  background-color: #f4f4f4;
-  @extend %fontFamilyMontserrat;
-  text-align: center;
-
-  &__title {
-    font-size: 30px;
-    font-weight: 700;
-    color: #8d81ac;
-  }
-
-  &__title:before {content: '<'}
-  &__title:after {content: '>'}
-
-  &__subtitle {
-    margin-bottom: 18px;
-    font-size: 16px;
-    color: #323232;
-  }
-
-  &__icon {
-    margin: 35px 0 25px;
-  }
-
-  &__desc {
-    @extend %fontFamilyLato;
-    font-size: 14px;
-    color: #848e97;
-    line-height: 1.3;
-  }
-
-  &__img {
-    margin: 57px 0 6px -22px;
-    height: 381px;
-  }
-}
-
-.people{
-  background: url("../img/testmonials1.png") no-repeat;
+.header{
+  background-image: url('../img/header-bg-image.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  height: 800px;
+  min-width: 343px;
+  @include mobile{
+    height: 718px;
+  }
+}
+
+.header__bg-color{
+  @include tablet {
+    width: 100%;
+    height: 118px;
+    background-color: #27262a;
+    position: absolute;
+    z-index: 1;
+  }
+  @include mobile {
+    width: 100%;
+    height: 103px;
+    background-color: #27262a;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    padding-top: 29.5px;
+    padding-bottom: 29.5px;
+    position: relative;
+    z-index: 2;
+    @include tablet {
+      padding-bottom: 47px;
+    }
+    @include mobile {
+      display: flex;
+      padding-top: 31px;
+      padding-bottom: 31px;
+      justify-content: space-between;
+    }
+}
+
+.header__menu-logo {
+  flex-grow: 1;
+  @include mobile {
+    flex-grow: 0;
+  }
+}
+
+.header__logo {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 60px 10px 0 10px;
-  box-shadow: inset 0 -80px 20px 20px rgba(75, 59, 78, .9);
-
-  &__slogan{
-    @extend %fontFamilyMontserrat;
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
+  max-width: fit-content;
+  &:hover .header__logo-text {
+    color: $general-text-color;
   }
-
-  &__text{
+  &:hover .header__logo-img {
     display: none;
   }
-
-  &__line{
-    display: inline-block;
-    width: 280px;
-    height: 2px;
-    background-color: #645766;
-    margin-top: 43px;
-  }
-}
-
-.card{
-  &__img{
-    margin: 35px 0 20px 0;
-  }
-  &__text{
-    color: #ffffff;
-    @extend %fontFamilyLato;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 16px;
-    hyphens: auto;
-    line-height: 1.6;
-  }
-}
-
-.pricing {
-  padding-top: 60px;
-  padding-bottom: 79px;
-  background: url("../img/pricing-bg.png") #4b3b4e ;
-  background-size: cover;
-  @extend %fontFamilyMontserrat;
-  text-align: center;
-  color: #fff;
-
-  &__title {
-    font-size: 27px;
-    font-weight: 700;
-    margin-bottom: 53px;
-  }
-
-  &__variant {
-    display: inline-block;
-    width: 257px;
-    padding-bottom: 38px;
-    margin-bottom: 14px;
-    background-color: rgba(255, 255, 255, .2);
-  }
-
-  &__variant-name {
-    padding-top: 46px;
-    padding-bottom: 34px;
-    margin-bottom: 32px;
-    background-color: rgba(255, 255, 255, .05);
-    text-transform: uppercase;
-    font-size: 20px;
-  }
-
-  &__price {
-    font-size: 56px;
-    font-weight: 700;
-  }
-
-  &__price:before { content: '\0024'; }
-  &__price:after {
-    content: 'per month';
+  &:hover .header__logo-img-hover {
     display: block;
-    margin: 24px 39px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    opacity: .3;
   }
-
-  &__variant-desc {
-    height: 50px;
-    font-size: 16px;
-    padding: 0 22px;
-    margin-bottom: 68px;
-    line-height: 1.2;
-  }
-
-  &__variant-desc:before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 5px;
-    margin: 0 auto 31px;
-    background-color: #8d81ac;
-  }
-
-  &__variant-btn {
-    display: inline-block;
-    border-radius: 25px;
-    padding: 16px 38px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    @include button(rgba(255, 255, 255, .2),none,#fff,rgba(255, 255, 255, .4), inherit);
-    @mixin button($background-color, $border, $color, $hover-background-color, $hover-color) { }
-  }
-
-  &__variant.active {
-    margin: 40px 0;
-    background-color: rgba(0, 0, 0, .15);
-    transform: scale(1.1);
-
-    .pricing__variant-name {
-      background-color: rgba(0, 0, 0, .05);
-      color: rgba(255, 255, 255, .8);
-    }
-  }
-
 }
 
-@media screen and (min-width: 481px) {
-  .header{
-    padding: 21px 10px;
-    grid-template-areas: 'logo button'
-                          'burger burger';
+.header__logo-img-hover{
+  display: none;
+}
 
-    &__button{
-      font-size: 16px;
-      justify-self: end;
-      width: 145px;
-      height: 40px;
-    }
+.header__logo-text{
+  color: $sub-general-text-color;
+  font-family: $additional-font-family;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-left: 17px;
+  @include mobile {
+    display: none;
+  }
+}
 
-    &__logo{
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      &:hover>.header__img{
-        background-image: url('../img/Background.png');
-      }
-      &:hover>.header__slogan{
-        color: #ffffff;
-      }
-    }
-
-    &__slogan{
-      display: inline-block;
-      font-size: 24px;
-      font-family: Lato,sans-serif;
-      font-weight: bold;
-      color: #8d81ac;
-      margin-left: 17px;
+.header__nav{
+  display: flex;
+  align-items: center;
+  @include mobile {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left:50%;
+    transform:translate(-50%, 0);
+    visibility: hidden;
+    &--active {
+      width: 293px;
+      top: 100px;
+      visibility: visible;
+      background-color: #333333;
+      transition-duration: 0.3s;
     }
   }
-
-  .burger{
-    height: 40px;
-    width: auto;
-    justify-self: center;
-    background: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    &__touch,  &__item{
-      display: none;
-    }
+  @include tablet {
+    position: absolute;
+    max-width: fit-content;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
+}
 
-  .menu{
-    position: static;
-    transform: translate(0, 0);
-    display: flex;
+.header__nav-list{
+  display: flex;
+  gap: 48px;
+  margin-right: 48px;
+  @include tablet {
+    gap: 24px;
+    margin-right: 0;
     justify-content: space-between;
-    transition: none;
-    background: none;
-    min-width: 450px;
+  }
+  @include mobile{
+    flex-direction: column;
+    gap: 0px;
+    margin-right: 0;
+  }
+}
 
-    &__item{
-      display: inline-block;
-      line-height: 1;
-      border: none;
-      padding-left: 0;
-      position: static;
-      font-size: 16px;
-      font-weight: bold;
-      color: #8d81ac;
+.header__nav-list-item {
+  @include mobile {
+    min-width: 292px;
+    border-bottom: 3px solid #3b3b3b;
+    text-align: start;
+    position: relative;
+  }
+}
 
-      &:hover:before{
-        content: none;
+
+.header__nav-link{
+  color: $sub-general-text-color;
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 17px;
+  cursor: pointer;
+  &:hover {
+    color: $general-text-color;
+  }
+  @include mobile {
+    display: block;
+    padding: 29px 0 21px 35px;
+    color: $general-text-color;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 26px;
+    &:active,
+    &:focus {
+      color: $sub-general-text-color;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 8px;
+        height: 53px;
+        background-color: $sub-general-text-color;
       }
+
+  }
+}
+}
+
+.header__menu-btn{
+  @include btn-header;
+  padding: 11px 35px;
+  font-size: 16px;
+  line-height: 1.07;
+  cursor: pointer;
+  @include mobile {
+    padding-left: 24px;
+    padding-right: 24px;
+    &:hover {
+      padding-left: 23.2px;
+      padding-right: 23.2px;
     }
   }
+}
 
-  .home{
-    height: 680px;
-
-    &__title{
-      font-size: 72px;
-    }
-    &__slogan{
-      font-size: 24px;
-    }
-    &__button{
-      width: 390px;
-      height: 65px;
-      font-size: 21px;
-    }
+.header__burger {
+  display: none;
+  border: none;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 3px;
+    background-color: $general-text-color;
+    transition: all 0.3s ease 0s;
   }
-
-  .rev-editor {
-    &__title {
-      font-size: 34px;
-      margin-bottom: 38px;
-    }
-
-    &__caption {
-      padding: 0 47px;
-      font-size: 20px;
-      line-height: 1.5;
-    }
-
-    &__actions {
-      margin: 36px 0 98px;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $general-text-color;
+    transition: all 0.3s ease 0s;
   }
-
-  .you-get {
-    padding: 54px 30px 23px;
-    text-align: left;
-
-    &__title {
-      margin-bottom: 60px;
-      font-size: 41px;
-      text-align: center;
+  &--active {
+    .header__burger-line {
+      transform: scale(0);
     }
-
-    &__icon-wrapper {
-      display: inline-block;
-      width: 24%;
-      text-align: center;
-      vertical-align: top;
-    }
-
-    &__icon {
-      margin: 0 0 60px;
-    }
-
-    &__text {
-      text-align: left;
-      display: inline-block;
-      width: 75%;
-    }
-
-    &__img {
-      height: initial;
-      margin: 0;
-    }
-  }
-
-  .people{
-    display: grid;
-    grid-column-gap: 10px;
-    justify-items: center;
-    grid-template-columns: repeat(2,1fr);
-
-   &__slogan, &__text, &__line{
-      grid-column-start:1;
-      grid-column-end:3;
-    }
-    &__slogan{
-      font-size: 42px;
-    }
-    &__text{
-      width: 670px;
-      display: inline-block;
-      margin-top: 58px;
-      font-family: Lato,sans-serif;
-      font-size: 14px;
-      color:#645766;
-    }
-    &__line{
-      margin-top: 15px;
-      width: 699px;
-    }
-  }
-
-  .card{
-    &__img{
-      margin: 0;
-      position: absolute;
+    &::before {
       top: 50%;
-      left: 50%;
-      transform: translate(-50%,-10%);
-
-      &-minwidth{
-        position: relative;
-        min-height: 154px;
-      }
-    }
-  }
-
-  .pricing {
-    display: flex;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-
-    &__title {
       width: 100%;
+      transform: rotate(-45deg) translate(0, -50%);
     }
-
-    &__variant {
-      width: 38%;
-      margin: 0 23px 92px;
-    }
-
-    &__variant.active {
-      transform: scale(1.2);
-      margin: 0 23px 92px;
+    &::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
     }
   }
+  @include mobile {
+    display: block;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #27262a;
+    width: 26px;
+    height: 21px;
+    position: relative;
+  }
+}
 
-  @media screen and (min-width: 992px) {
-    .container {
-      margin-left: -1;
-      margin-right: -1;
-      box-sizing: content-box;
-      padding-left: calc((100% - 1200px)/2);
-      padding-right: calc((100% - 1200px)/2);
+.header__burger-line {
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 26px;
+  height: 3px;
+  background-color: $general-text-color;
+  transform: scale(1);
+}
+
+
+.header__hero-title{
+  color: $general-text-color;
+  font-weight: 700;
+  font-size: 82px;
+  line-height: 82px;
+  margin-top: 83px;
+  margin-bottom: 19px;
+  text-align: center;
+  cursor: pointer;
+  @include tablet {
+    font-size: 72px;
+    line-height: 72px;
+    margin-top: 76.5px;
+  }
+  @include mobile {
+    font-size: 48px;
+    line-height: 48px;
+    margin-top: 49px;
+  }
+}
+
+.header__hero-text{
+  color: $sub-general-text-color;
+  font-family: $additional-font-family;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  @include tablet {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  @include mobile {
+    font-size: 18px;
+    max-width: 300px;
+    font-family: $main-font-family;
+    text-transform: capitalize;
+    margin: 0 auto;
+  }
+}
+
+.header__hero-product{
+  color: #848e97;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-top: 19px;
+  margin-bottom: 507px;
+  text-align: center;
+  @include tablet {
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 513.5px;
+  }
+  @include mobile {
+    margin-top: 14px;
+    margin-bottom: 450px;
+  }
+
+}
+
+.header__hero-btn{
+  @include btn-header;
+  padding: 23px 61px;
+  font-size: 21px;
+  line-height: 1.05;
+  &:hover {
+    border: 2px solid $sub-general-text-color;
+    padding: 21.4px 59.4px;
+  }
+  position: absolute;
+  top: 767px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: max-content;
+  @include mobile {
+    padding: 15px 29px;
+    font-size: 18px;
+    line-height: 20px;
+    top: 693px;
+    &:hover {
+        padding: 13.4px 27.4px;
     }
+ }
+}
 
-    .header{
-      grid-template-columns: 149px 1fr 170px ;
-      grid-template-areas: 'logo burger button';
-    }
-
-    .burger{
-      justify-self: end;
-      align-items: center;
-      justify-content: flex-end;
-    }
-
-    .home{
-      height: 699px;
-    }
-
-    .rev-editor {
-      &__title {
-        font-size: 41px;
-      }
-
-      &__caption {
-        font-size: 23px;
-      }
-    }
-
-    .you-get {
-      display: grid;
-      grid-template-columns: 48% 52%;
-      grid-auto-rows: min-content;
-      padding-top: 99px;
-      padding-right: -1;
-
-      &__title {
-        grid-column: 2 / 3;
-        text-align: left;
-        margin-left: 21px;
-        margin-bottom: 29px;
-      }
-
-      &__items {
-        grid-row: 1 / 3;
-        margin: 0 60px;
-      }
-
-      &__icon-wrapper { width: 36%; }
-      &__text {
-        width: 62%;
-        margin-bottom: 10px;
-      }
-
-      &__img-wrapper {
-        overflow: hidden;
-      }
-    }
-
-    .people{
-      grid-template-columns: repeat(3,1fr);
-      &__slogan, &__text, &__line{
-        grid-column-start:0;
-        grid-column-end:4;
-      }
-
-      &__slogan{
-        font-size: 47px;
-      }
-
-      &__text{
-        width: 859px;
-      }
-
-      &__line{
-        width: 779px;
-      }
-    }
-
-    .pricing {
-      justify-content: center;
-
-      &__title {
-        margin-bottom: 121px;
-      }
-
-      &__variant {
-        width: 19%;
-        margin: 0 7px;
-      }
-
-      &__variant.active {
-        margin: 0 25px;
-      }
-    }
+.header__hero-trial{
+  color: #848e97;
+  font-size: 14px;
+  line-height: 15px;
+  padding-bottom: 66px;
+  text-align:center;
+  @include tablet {
+    padding-bottom: 93.5px;
+  }
+  @include mobile {
+    padding-bottom: 79.5px;
   }
 }

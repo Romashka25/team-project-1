@@ -5,79 +5,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../dist/css/styles.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../dist/css/styles.min.css">
-    <script defer src="./src/js/index.js" type="module"></script>
-    <title>Team project</title>
+    <title>ForkIO</title>
 </head>
 
 <body>
-    <p></p>
-  <section class="rev-editor container">
-    <h2 class="rev-editor__title">Revolutionary editor</h2>
-    <p class="rev-editor__caption">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.
-    </p>
-    <div class="social-placeholder"><img src="src/img/buttons1.png" height="26" width="365" alt=""></div>
+     <!-- Header -->
+ <header class="header">
+    <div class="header__bg-color"></div>
+    <div class="header__container wrapper">
+        <div class="header__menu">
+            <div class="header__menu-logo">
+                <a href="#" class="header__logo">
+                    <img class="header__logo-img" src="../dist/img/Logo-Forkio.svg" alt="logo-forkio">
+                    <img class="header__logo-img-hover" src="../dist/img/Logo-Forkio-hover.svg" alt="logo-forkio-hover">
+                    <p class="header__logo-text">ForkIO</p>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-list-item">
+                        <a href="#" class="header__nav-link">Overview</a>
+                    </li>
+                    <li class="header__nav-list-item">
+                        <a href="#" class="header__nav-link">About Fork</a>
+                    </li>
+                    <li class="header__nav-list-item">
+                        <a href="#" class="header__nav-link">Buying Options</a>
+                    </li>
+                    <li class="header__nav-list-item">
+                        <a href="#" class="header__nav-link">Support</a>
+                    </li>
+                </ul>
+            </nav> 
+            <button class="header__menu-btn" type="button">Buy Now</button>
+            <button class="header__burger" type="button">
+                <span class="header__burger-line"></span>
+              </button>            
+        </div>
+        <div class="header__hero">
+            <h1 class="header__hero-title">Fork App</h1>
+            <p class="header__hero-text">A real gamechanger in the world of web development</p>
+            <p class="header__hero-product">v. 2.8 For Mac and Windows</p>
+            <button class="header__hero-btn" type="button">
+                Download For Free Now
+            </button>
+            <p class="header__hero-trial">Unlimited 30-Days Trial Period</p>
+        </div>
+    </div>
+</header>
+    <main>
+         <!-- section  testimonials-->
+ <section class="testimonials">
+    <div class="wrapper">
+         <h2 class="testimonials__title">People Are Talking About Fork</h2>
+         <ul class="testimonials__list">
+            <li class="testimonials__list-item">
+                <img src="../dist/img/smashing.png" alt="logo" class="testimonials__item-img--smashing" width="165" height="43">
+                <p class="testimonials__item-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+            </li>
+            <li class="testimonials__list-item">
+                <img src="../dist//img/codrops.png" alt="logo" class="testimonials__item-img--codrops" width="148" height="50">
+                <p class="testimonials__item-text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+            </li>
+            <li class="testimonials__list-item">
+                <img src="../dist//img/w.png" alt="logo" class="testimonials__item-img--w" width="64" height="64">
+                <p class="testimonials__item-text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
+            </li>
+            <li class="testimonials__list-item">
+                <img src="../dist//img/pixel_buddha.png" alt="logo" class="testimonials__item-img--pixel" width="225" height="24">
+                <p class="testimonials__item-text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+            </li>
+            <li class="testimonials__list-item">
+                <img src="../dist//img/creative_bloq.png" alt="logo" class="testimonials__item-img--creative" width="166" height="34">
+                <p class="testimonials__item-text">Praesent ut eros tristique, malesuada lectus vel, lobortis massa. Nulla faucibus lorem id arcu consequat faucibus.</p>
+            </li>
+            <li class="testimonials__list-item">
+                <img src="../dist//img/tnw.png" alt="logo" class="testimonials__item-img--tnw" width="108" height="34">
+                <p class="testimonials__item-text">Fusce pharetra erat id odio blandit, nec pharetra eros venenatis. Pellentesque porttitor cursus massa et vestibulum.</p>
+            </li>
+         </ul>
+         <p class="testimonials__text">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        </div>
 </section>
+        <!-- section pricing -->
+<div class="section-block">
+<div class="wrapper">
+<section class="section__pricing">
+    <h2 class="pricing__title">Fork Subscription Pricing</h2>
+    <div class="container--grid">
+    <div class="pricing__cards">
 
-<section class="you-get container">
-    <h2 class="you-get__title">Here is what you get</h2>
-    <div class="you-get__items">
-        <div class="you-get__item">
-            <div class="you-get__icon-wrapper">
-                <img class="you-get__icon" src="src/img/icon1.png" alt="'Created to Make The Web Better' icon">
+        <div class="pricing__card">
+            <div class="card__header">
+                <p class="card__header__title">Students</p>
             </div>
-            <div class="you-get__text">
-                <h3 class="you-get__subtitle">Created to Make The Web Better</h3>
-                <p class="you-get__desc">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.
-                </p>
-            </div>
-        </div>
-    
-        <div class="you-get__item">
-            <div class="you-get__icon-wrapper">
-                <img class="you-get__icon" src="src/img/icon2.png" alt="'Incredibly Powerful Tool' icon">
-            </div>
-            <div class="you-get__text">
-                <h3 class="you-get__subtitle">Incredibly Powerful Tool</h3>
-                <p class="you-get__desc">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.
-                </p>
+
+            <div class="card__content--flex">
+                <p class="card__price">$<span class="bold">29</span></p>
+                <p class="card__content__text">per month</p>
+                <span class="card__content__line"></span>
+                <p class="card__content__text-2">Personal License</p>
+                <div class="card__content__btn">
+                    <p class="card__btn__title">purchase</p>
+                </div>
             </div>
         </div>
-    
-        <div class="you-get__item">
-            <div class="you-get__icon-wrapper">
-                <img class="you-get__icon" src="src/img/icon3.png" alt="'Experimental Stuff' icon">
+
+        <div class="pricing__card">
+            <div class="card__header">
+                <p class="card__header__title">professional</p>
             </div>
-            <div class="you-get__text">
-                <h3 class="you-get__subtitle">Experimental Stuff</h3>
-                <p class="you-get__desc">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.
-                </p>
+
+            <div class="card__content--flex">
+                <p class="card__price">$<span class="bold">59</span></p>
+                <p class="card__content__text">per month</p>
+                <span class="card__content__line"></span>
+                <p class="card__content__text-2">Professional License Email Support</p>
+                <div class="card__content__btn">
+                    <p class="card__btn__title">purchase</p>
+                </div>
             </div>
         </div>
-    
-        <div class="you-get__item">
-            <div class="you-get__icon-wrapper">
-                <img class="you-get__icon" src="src/img/icon4.png" alt="'Created to Make The Web Better' icon">
+
+        <div class="pricing__card--large">
+            <div class="card__header">
+                <p class="card__header__title">agency</p>
             </div>
-            <div class="you-get__text">
-                <h3 class="you-get__subtitle">Created to Make The Web Better</h3>
-                <p class="you-get__desc">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.
-                </p>
+
+            <div class="card__content--flex">
+                <p class="card__price">$<span class="bold">99</span></p>
+                <p class="card__content__text">per month</p>
+                <span class="card__content__line"></span>
+                <p class="card__content__text-2">1-12 Team Members Phone Support</p>
+                <div class="card__content__btn">
+                    <p class="card__btn__title">purchase</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing__card last">
+            <div class="card__header">
+                <p class="card__header__title">enterprise</p>
+            </div>
+
+            <div class="card__content--flex">
+                <p class="card__price">$<span class="bold">159</span></p>
+                <p class="card__content__text">per month</p>
+                <span class="card__content__line"></span>
+                <p class="card__content__text-2">Unlimited Team Members 24/ 7 Phone Support</p>
+                <div class="card__content__btn">
+                    <p class="card__btn__title">purchase</p>
+                </div>
             </div>
         </div>
     </div>
-    <div class="you-get__img-wrapper">
-        <img class="you-get__img" src="src/img/editor1.png" alt="Code image">
-    </div>
+</div>
 </section>
+</div>
+</div>
+        <div class="wrapper">
 
-<section class="people container">
+<section class="section__btn-download">
+    <div class="btn-download">
+        <div class="btn-download__block"><p class="btn-download__title">Download For Free Now</p></div>
+        <p class="btn-download__text">Unlimited 30-Days Trial Period</p>
+    </div>
+</section></div>
+        <section class="people container">
     <h2 class="people__slogan">
         People Are Talking About Fork
     </h2>
@@ -85,43 +187,50 @@
         <div class="card__img-minwidth">
             <img class="card__img" src="src/img/logo.png" alt="not found">
         </div>
-        <p class="card__text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+        <p class="card__text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim
+            magna. Sed varius urna et pulvinar venenatis.</p>
     </div>
     <div class="card">
         <div class="card__img-minwidth">
             <img class="card__img" src="src/img/logo1.png" alt="not found">
         </div>
-        <p class="card__text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+        <p class="card__text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque
+            ac, mollis eleifend nibh.</p>
     </div>
     <div class="card">
         <div class="card__img-minwidth">
             <img class="card__img" src="src/img/logo2.png" alt="not found">
         </div>
-        <p class="card__text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
+        <p class="card__text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla,
+            imperdiet nibh. Morbi tempus auctor felis ac vehicula.</p>
     </div>
     <div class="card">
         <div class="card__img-minwidth">
             <img class="card__img" src="src/img/logo3.png" alt="not found">
         </div>
-        <p class="card__text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim magna. Sed varius urna et pulvinar venenatis.</p>
+        <p class="card__text">Sed vestibulum scelerisque urna, eu finibus leo facilisis sit amet. Proin id dignissim
+            magna. Sed varius urna et pulvinar venenatis.</p>
     </div>
     <div class="card">
         <div class="card__img-minwidth">
             <img class="card__img" src="src/img/logo4.png" alt="not found">
         </div>
-        <p class="card__text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque ac, mollis eleifend nibh.</p>
+        <p class="card__text">Donec euismod dolor ut ultricies consequat. Vivamus urna ipsum, rhoncus molestie neque
+            ac, mollis eleifend nibh.</p>
     </div>
     <div class="card">
         <div class="card__img-minwidth">
             <img class="card__img" src="src/img/logo5.png" alt="not found">
         </div>
-        <p class="card__text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla, imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
+        <p class="card__text">In efficitur in velit et tempus. Duis nec odio dapibus, suscipit erat fringilla,
+            imperdiet nibh. Morbi tempus auctor felis ac vehicula. </p>
     </div>
-    <p class="people__text">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+    <p class="people__text">Duis lobortis arcu sed arcu tincidunt feugiat. Nulla nisi mauris, facilisis vitae
+        aliquet id, imperdiet quis nibh. Donec eget elit eu libero tincidunt consequat nec elementum orci. Cum
+        sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
     <div class="people__line"></div>
 </section>
-
-<section class="pricing container">
+        <section class="pricing container">
     <h2 class="pricing__title">Fork Subscription Pricing</h2>
     <div class="pricing__variant">
         <h3 class="pricing__variant-name">Students</h3>
@@ -151,9 +260,72 @@
         <button class="pricing__variant-btn">purchase</button>
     </div>
 </section>
+        <section class="rev-editor container">
+    <h2 class="rev-editor__title">Revolutionary editor</h2>
+    <p class="rev-editor__caption">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet vulputate
+        dignissim. Sed id metus id quam auctor molestie eget ut augue.
+    </p>
+    <div class="social-placeholder"><img src="src/img/buttons1.png" height="26" width="365" alt=""></div>
+</section>
+        <section class="you-get container">
+    <h2 class="you-get__title">Here is what you get</h2>
+    <div class="you-get__items">
+        <div class="you-get__item">
+            <div class="you-get__icon-wrapper">
+                <img class="you-get__icon" src="src/img/icon1.png" alt="'Created to Make The Web Better' icon">
+            </div>
+            <div class="you-get__text">
+                <h3 class="you-get__subtitle">Created to Make The Web Better</h3>
+                <p class="you-get__desc">Aenean cursus imperdiet nisl id fermentum. Aliquam pharetra dui laoreet
+                    vulputate dignissim. Sed id metus id quam auctor molestie eget ut augue.
+                </p>
+            </div>
+        </div>
 
-<script src="src/js/index.js"></script>
+        <div class="you-get__item">
+            <div class="you-get__icon-wrapper">
+                <img class="you-get__icon" src="src/img/icon2.png" alt="'Incredibly Powerful Tool' icon">
+            </div>
+            <div class="you-get__text">
+                <h3 class="you-get__subtitle">Incredibly Powerful Tool</h3>
+                <p class="you-get__desc">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut
+                    volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.
+                </p>
+            </div>
+        </div>
 
+        <div class="you-get__item">
+            <div class="you-get__icon-wrapper">
+                <img class="you-get__icon" src="src/img/icon3.png" alt="'Experimental Stuff' icon">
+            </div>
+            <div class="you-get__text">
+                <h3 class="you-get__subtitle">Experimental Stuff</h3>
+                <p class="you-get__desc">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut
+                    volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.
+                </p>
+            </div>
+        </div>
+
+        <div class="you-get__item">
+            <div class="you-get__icon-wrapper">
+                <img class="you-get__icon" src="src/img/icon4.png" alt="'Created to Make The Web Better' icon">
+            </div>
+            <div class="you-get__text">
+                <h3 class="you-get__subtitle">Created to Make The Web Better</h3>
+                <p class="you-get__desc">Maecenas eu dictum felis, a dignissim nibh. Mauris rhoncus felis odio, ut
+                    volutpat massa placerat ac. Curabitur dapibus iaculis mi gravida luctus. Aliquam erat volutpat.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="you-get__img-wrapper">
+        <img class="you-get__img" src="src/img/editor1.png" alt="Code image">
+    </div>
+</section>
+    </main>
+
+
+    <script src="../dist/js/script-min.js"></script>
 </body>
 
 </html>
