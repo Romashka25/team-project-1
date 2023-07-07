@@ -14,21 +14,18 @@
   }
 }
 
-// от 993 до 1200
 @mixin laptop() {
   @media ((min-width: $screen-laptop_min) and (max-width:$screen-laptop_max)) {
     @content;
   }
 }
 
-// от 481 до 992
 @mixin tablet() {
   @media ((min-width: $screen-tablet_min) and (max-width:$screen-tablet-max)) {
     @content;
   }
 }
 
-// от 320 до 480
 @mixin mobile() {
   @media ((min-width: $screen-mobile-min) and (max-width:$screen-mobile_max)) {
     @content;
