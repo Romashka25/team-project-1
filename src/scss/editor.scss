@@ -79,6 +79,12 @@ $maxWidth: 1200px;
   &__action-count {
     margin: 0 5px;
   }
+
+  &__img {
+    height: 26px;
+    max-width: 365px;
+    width: 100%;
+  }
 }
 
 .you-get {
@@ -122,39 +128,41 @@ $maxWidth: 1200px;
   &__img {
     margin: 57px 0 6px -22px;
     height: 381px;
+    max-width: 700px;
+    width: 100%;
   }
 }
 
-.people {
-  background: url("../img/testmonials1.png") no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 60px 10px 0 10px;
-  box-shadow: inset 0 -80px 20px 20px rgba(75, 59, 78, 0.9);
+// .people {
+//   background: url("../img/testmonials1.png") no-repeat;
+//   background-size: cover;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   text-align: center;
+//   padding: 60px 10px 0 10px;
+//   box-shadow: inset 0 -80px 20px 20px rgba(75, 59, 78, 0.9);
 
-  &__slogan {
-    // @extend %fontFamilyMontserrat;
-    font-family: $main-font-family;
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffffff;
-  }
+//   &__slogan {
+//     // @extend %fontFamilyMontserrat;
+//     font-family: $main-font-family;
+//     font-size: 36px;
+//     font-weight: bold;
+//     color: #ffffff;
+//   }
 
-  &__text {
-    display: none;
-  }
+//   &__text {
+//     display: none;
+//   }
 
-  &__line {
-    display: inline-block;
-    width: 280px;
-    height: 2px;
-    background-color: #645766;
-    margin-top: 43px;
-  }
-}
+//   &__line {
+//     display: inline-block;
+//     width: 280px;
+//     height: 2px;
+//     background-color: #645766;
+//     margin-top: 43px;
+//   }
+// }
 
 .card {
   &__img {
@@ -309,317 +317,325 @@ $maxWidth: 1200px;
   }
 }
 
-@media screen and (min-width: 481px) {
+// @media screen and (min-width: 481px) {
+//   .header {
+//     padding: 21px 10px;
+//     grid-template-areas:
+//       "logo button"
+//       "burger burger";
+
+//     &__button {
+//       font-size: 16px;
+//       justify-self: end;
+//       width: 145px;
+//       height: 40px;
+//     }
+
+//     &__logo {
+//       display: flex;
+//       align-items: center;
+//       cursor: pointer;
+//       &:hover > .header__img {
+//         background-image: url("../img/Background.png");
+//       }
+//       &:hover > .header__slogan {
+//         color: #ffffff;
+//       }
+//     }
+
+//     &__slogan {
+//       display: inline-block;
+//       font-size: 24px;
+//       font-family: Lato, sans-serif;
+//       font-weight: bold;
+//       color: #8d81ac;
+//       margin-left: 17px;
+//     }
+//   }
+
+//   .burger {
+//     height: 40px;
+//     width: auto;
+//     justify-self: center;
+//     background: none;
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: row;
+//     &__touch,
+//     &__item {
+//       display: none;
+//     }
+//   }
+
+//   .menu {
+//     position: static;
+//     transform: translate(0, 0);
+//     display: flex;
+//     justify-content: space-between;
+//     transition: none;
+//     background: none;
+//     min-width: 450px;
+
+//     &__item {
+//       display: inline-block;
+//       line-height: 1;
+//       border: none;
+//       padding-left: 0;
+//       position: static;
+//       font-size: 16px;
+//       font-weight: bold;
+//       color: #8d81ac;
+
+//       &:hover:before {
+//         content: none;
+//       }
+//     }
+//   }
+
+.home {
+  height: 680px;
+
+  &__title {
+    font-size: 72px;
+  }
+  &__slogan {
+    font-size: 24px;
+  }
+  &__button {
+    width: 390px;
+    height: 65px;
+    font-size: 21px;
+  }
+}
+
+.rev-editor {
+  &__title {
+    font-size: 34px;
+    margin-bottom: 38px;
+  }
+
+  &__caption {
+    padding: 0 47px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  &__actions {
+    margin: 36px 0 98px;
+  }
+}
+
+.you-get {
+  padding: 54px 30px 23px;
+  text-align: right;
+
+  &__title {
+    margin-bottom: 60px;
+    font-size: 41px;
+    text-align: center;
+  }
+
+  &__icon-wrapper {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  &__icon {
+    margin: 0 0 60px;
+  }
+
+  &__text {
+    text-align: left;
+    display: inline-block;
+    width: 75%;
+  }
+
+  &__img {
+    height: initial;
+    margin: 0;
+  }
+}
+
+//   .people {
+//     display: grid;
+//     grid-column-gap: 10px;
+//     justify-items: center;
+//     grid-template-columns: repeat(2, 1fr);
+
+//     &__slogan,
+//     &__text,
+//     &__line {
+//       grid-column-start: 1;
+//       grid-column-end: 3;
+//     }
+//     &__slogan {
+//       font-size: 42px;
+//     }
+//     &__text {
+//       width: 670px;
+//       display: inline-block;
+//       margin-top: 58px;
+//       font-family: Lato, sans-serif;
+//       font-size: 14px;
+//       color: #645766;
+//     }
+//     &__line {
+//       margin-top: 15px;
+//       width: 699px;
+//     }
+//   }
+
+//   .card {
+//     &__img {
+//       margin: 0;
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -10%);
+
+//       &-minwidth {
+//         position: relative;
+//         min-height: 154px;
+//       }
+//     }
+//   }
+
+//   .pricing {
+//     display: flex;
+//     padding-left: 4vw;
+//     padding-right: 4vw;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: flex-start;
+
+//     &__title {
+//       width: 100%;
+//     }
+
+//     &__variant {
+//       width: 38%;
+//       margin: 0 23px 92px;
+//     }
+
+//     &__variant.active {
+//       transform: scale(1.2);
+//       margin: 0 23px 92px;
+//     }
+//   }
+
+@media screen and (min-width: 992px) {
+  .container {
+    margin-left: -1;
+    margin-right: -1;
+    box-sizing: content-box;
+    padding-left: calc((100% - 1200px) / 2);
+    padding-right: calc((100% - 1200px) / 2);
+  }
+
   .header {
-    padding: 21px 10px;
-    grid-template-areas:
-      "logo button"
-      "burger burger";
-
-    &__button {
-      font-size: 16px;
-      justify-self: end;
-      width: 145px;
-      height: 40px;
-    }
-
-    &__logo {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      &:hover > .header__img {
-        background-image: url("../img/Background.png");
-      }
-      &:hover > .header__slogan {
-        color: #ffffff;
-      }
-    }
-
-    &__slogan {
-      display: inline-block;
-      font-size: 24px;
-      font-family: Lato, sans-serif;
-      font-weight: bold;
-      color: #8d81ac;
-      margin-left: 17px;
-    }
+    grid-template-columns: 149px 1fr 170px;
+    grid-template-areas: "logo burger button";
   }
 
   .burger {
-    height: 40px;
-    width: auto;
-    justify-self: center;
-    background: none;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    &__touch,
-    &__item {
-      display: none;
-    }
-  }
-
-  .menu {
-    position: static;
-    transform: translate(0, 0);
-    display: flex;
-    justify-content: space-between;
-    transition: none;
-    background: none;
-    min-width: 450px;
-
-    &__item {
-      display: inline-block;
-      line-height: 1;
-      border: none;
-      padding-left: 0;
-      position: static;
-      font-size: 16px;
-      font-weight: bold;
-      color: #8d81ac;
-
-      &:hover:before {
-        content: none;
-      }
-    }
+    justify-self: end;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .home {
-    height: 680px;
-
-    &__title {
-      font-size: 72px;
-    }
-    &__slogan {
-      font-size: 24px;
-    }
-    &__button {
-      width: 390px;
-      height: 65px;
-      font-size: 21px;
-    }
+    height: 699px;
   }
 
   .rev-editor {
     &__title {
-      font-size: 34px;
-      margin-bottom: 38px;
+      font-size: 41px;
     }
 
     &__caption {
-      padding: 0 47px;
-      font-size: 20px;
-      line-height: 1.5;
-    }
-
-    &__actions {
-      margin: 36px 0 98px;
+      font-size: 23px;
     }
   }
 
   .you-get {
-    padding: 54px 30px 23px;
-    text-align: left;
+    display: grid;
+    grid-template-columns: 48% 52%;
+    grid-auto-rows: min-content;
+    padding-top: 99px;
+    padding-right: -1;
 
     &__title {
-      margin-bottom: 60px;
-      font-size: 41px;
-      text-align: center;
+      grid-column: 2 / 3;
+      text-align: left;
+      margin-left: 21px;
+      margin-bottom: 29px;
+    }
+
+    &__items {
+      grid-row: 1 / 3;
+      margin: 0 60px;
     }
 
     &__icon-wrapper {
-      display: inline-block;
-      width: 24%;
-      text-align: center;
-      vertical-align: top;
-    }
-
-    &__icon {
-      margin: 0 0 60px;
-    }
-
-    &__text {
-      text-align: left;
-      display: inline-block;
-      width: 75%;
-    }
-
-    &__img {
-      height: initial;
-      margin: 0;
-    }
-  }
-
-  .people {
-    display: grid;
-    grid-column-gap: 10px;
-    justify-items: center;
-    grid-template-columns: repeat(2, 1fr);
-
-    &__slogan,
-    &__text,
-    &__line {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    &__slogan {
-      font-size: 42px;
+      width: 36%;
     }
     &__text {
-      width: 670px;
-      display: inline-block;
-      margin-top: 58px;
-      font-family: Lato, sans-serif;
-      font-size: 14px;
-      color: #645766;
+      width: 62%;
+      margin-bottom: 10px;
     }
-    &__line {
-      margin-top: 15px;
-      width: 699px;
+
+    &__img-wrapper {
+      overflow: hidden;
     }
   }
 
-  .card {
-    &__img {
-      margin: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -10%);
+  // .people {
+  //   grid-template-columns: repeat(3, 1fr);
+  //   &__slogan,
+  //   &__text,
+  //   &__line {
+  //     grid-column-start: 0;
+  //     grid-column-end: 4;
+  //   }
 
-      &-minwidth {
-        position: relative;
-        min-height: 154px;
-      }
-    }
-  }
+  //   &__slogan {
+  //     font-size: 47px;
+  //   }
+
+  //   &__text {
+  //     width: 859px;
+  //   }
+
+  //   &__line {
+  //     width: 779px;
+  //   }
+  // }
 
   .pricing {
-    display: flex;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
 
     &__title {
-      width: 100%;
+      margin-bottom: 121px;
     }
 
     &__variant {
-      width: 38%;
-      margin: 0 23px 92px;
+      width: 19%;
+      margin: 0 7px;
     }
 
     &__variant.active {
-      transform: scale(1.2);
-      margin: 0 23px 92px;
+      margin: 0 25px;
     }
   }
+}
 
-  @media screen and (min-width: 992px) {
-    .container {
-      margin-left: -1;
-      margin-right: -1;
-      box-sizing: content-box;
-      padding-left: calc((100% - 1200px) / 2);
-      padding-right: calc((100% - 1200px) / 2);
-    }
+.rev-editor {
+  margin-top: 130px;
+}
 
-    .header {
-      grid-template-columns: 149px 1fr 170px;
-      grid-template-areas: "logo burger button";
-    }
-
-    .burger {
-      justify-self: end;
-      align-items: center;
-      justify-content: flex-end;
-    }
-
-    .home {
-      height: 699px;
-    }
-
-    .rev-editor {
-      &__title {
-        font-size: 41px;
-      }
-
-      &__caption {
-        font-size: 23px;
-      }
-    }
-
-    .you-get {
-      display: grid;
-      grid-template-columns: 48% 52%;
-      grid-auto-rows: min-content;
-      padding-top: 99px;
-      padding-right: -1;
-
-      &__title {
-        grid-column: 2 / 3;
-        text-align: left;
-        margin-left: 21px;
-        margin-bottom: 29px;
-      }
-
-      &__items {
-        grid-row: 1 / 3;
-        margin: 0 60px;
-      }
-
-      &__icon-wrapper {
-        width: 36%;
-      }
-      &__text {
-        width: 62%;
-        margin-bottom: 10px;
-      }
-
-      &__img-wrapper {
-        overflow: hidden;
-      }
-    }
-
-    .people {
-      grid-template-columns: repeat(3, 1fr);
-      &__slogan,
-      &__text,
-      &__line {
-        grid-column-start: 0;
-        grid-column-end: 4;
-      }
-
-      &__slogan {
-        font-size: 47px;
-      }
-
-      &__text {
-        width: 859px;
-      }
-
-      &__line {
-        width: 779px;
-      }
-    }
-
-    .pricing {
-      justify-content: center;
-
-      &__title {
-        margin-bottom: 121px;
-      }
-
-      &__variant {
-        width: 19%;
-        margin: 0 7px;
-      }
-
-      &__variant.active {
-        margin: 0 25px;
-      }
-    }
-  }
+.social-placeholder {
+  margin-top: 30px;
+  margin-bottom: 85px;
 }

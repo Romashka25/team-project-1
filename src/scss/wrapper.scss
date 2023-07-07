@@ -1,25 +1,25 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-a, li {
-    text-decoration: none;
+a,
+li {
+  text-decoration: none;
 }
 
-body{
+body {
   font-family: $main-font-family;
 }
 
-
-.wrapper{
-    min-width: 320px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
+.wrapper {
+  //   min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-.sect-0{
-    background-color: #635C73;
-    height: 240px;
-    width: 100%;
+.sect-0 {
+  background-color: #635c73;
+  height: 240px;
+  width: 100%;
 }

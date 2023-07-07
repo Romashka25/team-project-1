@@ -1,37 +1,36 @@
 // Mixin button-header
 @mixin btn-header() {
-    font-family: $main-font-family;
-    background-color: $sub-general-text-color;
-    color: $general-text-color;
-    font-weight: 700;
-    border-radius: 40px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5 easy;
-    &:hover {
-        color: $sub-general-text-color;
-        background-color: $general-text-color;
-    }
+  font-family: $main-font-family;
+  background-color: $sub-general-text-color;
+  color: $general-text-color;
+  font-weight: 700;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    color: $sub-general-text-color;
+    background-color: $general-text-color;
+  }
 }
-
 
 // от 993 до 1200
 @mixin laptop() {
-    @media ((min-width: $screen-laptop_min) and (max-width:$screen-laptop_max)) {
-        @content
-    }
-};
+  @media ((min-width: $screen-laptop_min) and (max-width:$screen-laptop_max)) {
+    @content;
+  }
+}
 
 // от 481 до 992
 @mixin tablet() {
-    @media ((min-width: $screen-tablet_min) and (max-width:$screen-tablet-max)) {
-        @content
-    }
-};
+  @media ((min-width: $screen-tablet_min) and (max-width:$screen-tablet-max)) {
+    @content;
+  }
+}
 
-// от 320 до 480 
+// от 320 до 480
 @mixin mobile() {
-    @media ((min-width: $screen-mobile-min) and (max-width:$screen-mobile_max)) {
-        @content
-    }
-};
+  @media ((min-width: $screen-mobile-min) and (max-width:$screen-mobile_max)) {
+    @content;
+  }
+}

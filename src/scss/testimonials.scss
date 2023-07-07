@@ -1,20 +1,20 @@
 .testimonials {
-    background-image: url("../img/testmonials-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 108px;
-    padding-bottom: 25.5px;
-    text-align: center;
-    min-width: 343px;
-    height: 100%;
-    @include tablet {
-      padding-top: 86px;
-    }
-    @include mobile {
-      padding-top: 57px;
-    }
+  background-image: url("../img/testmonials-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  padding-top: 108px;
+  padding-bottom: 18.5px;
+  text-align: center;
+  // min-width: 343px;
+  height: 100%;
+  @include tablet {
+    padding-top: 86px;
   }
+  @include mobile {
+    padding-top: 57px;
+  }
+}
 
 .testimonials__title {
   font-family: $main-font-family;
@@ -22,14 +22,14 @@
   font-size: 48px;
   line-height: 1;
   color: $general-text-color;
-    @include tablet {
-      font-size: 42px;
-      line-height: 1;
-    }
-    @include mobile {
-      font-size: 36px;
-      line-height: 1.33;
-    }
+  @include tablet {
+    font-size: 42px;
+    line-height: 1;
+  }
+  @include mobile {
+    font-size: 36px;
+    line-height: 1.33;
+  }
 }
 
 .testimonials__list {
@@ -71,7 +71,6 @@
     margin-bottom: 30px;
   }
 }
-
 
 .testimonials__item-text {
   color: $general-text-color;
